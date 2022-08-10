@@ -3,7 +3,13 @@ import { Entity } from "../../core/domain/Entity";
 type UserProps = {
   name: string;
   email: string;
-  password: string;
+  height: number;
+  weight: number;
+  document: number;
+  address: {
+    street: string;
+    number: number;
+  }
 }
 
 class User extends Entity<UserProps> {
@@ -16,3 +22,5 @@ class User extends Entity<UserProps> {
     return user
   }
 }
+
+export {User}
